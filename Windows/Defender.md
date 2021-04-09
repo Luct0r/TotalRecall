@@ -1,4 +1,5 @@
 **Check Defender via PowerShell**
+
 Open PowerShell as administrator:
 ```
 Get-MpComputerStatus
