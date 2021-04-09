@@ -1,6 +1,6 @@
 **Check Defender via PowerShell**
 
-Open PowerShell as administrator:
+Administrator privileges required:
 ```
 Get-MpComputerStatus
 
@@ -16,8 +16,13 @@ Set-MpPreference -ExclusionExtension EXTENSION
 ```
 Disable antivirus:
 
-(Once you complete the steps, the real-time antivirus protection will be disabled until the next reboot)
+(Once you completed, the real-time antivirus protection will be disabled until the next reboot)
 ```
 Set-MpPreference -DisableRealtimeMonitoring $true
 
+```
+Roll back definitions:
+```
+cd "C:\Program Files\Windows Defender\"
+MpCMDRun.exe -removedefinitions -all
 ```
