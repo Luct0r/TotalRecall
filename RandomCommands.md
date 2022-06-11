@@ -7,3 +7,5 @@
 `cat bloodhound_users.json | jq '.users[].Properties | select(.enabled=true) | .email' | tr -d '"' > users.txt`
 
 `cat dehashed.json | jq '.[].fullName' > names.txt`
+
+`while read line; do grep "${line//\"/}" FileToSearch; done < FileToRead | grep "Something"`
