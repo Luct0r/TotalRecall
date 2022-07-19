@@ -9,3 +9,5 @@
 `cat dehashed.json | jq '.[].fullName' > names.txt`
 
 `while read line; do grep "${line//\"/}" FileToSearch; done < FileToRead | grep "Something"`
+
+`grep -oE ".{0,15}@emaildomain.com.{0,1}" file.txt`
