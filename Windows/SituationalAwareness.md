@@ -5,6 +5,10 @@ reg query HKLM\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
 
 reg query HKLM\SOFTWARE\WOW6432Node\Policies\Microsoft\Windows\PowerShell\Transcription /s
 ```
+**Check .NET Version**
+
+`reg query "HKLM\SOFTWARE\Microsoft\Net Framework Setup\NDP" /s`
+
 **Trace RDP Logins to User Desktops**
 
 Can do a `netstat -ano` which requires CMD/PowerShell
