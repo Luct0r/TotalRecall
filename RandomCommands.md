@@ -11,3 +11,5 @@
 `while read line; do grep "${line//\"/}" FileToSearch; done < FileToRead | grep "Something"`
 
 `grep -oE ".{0,15}@emaildomain.com.{0,1}" file.txt`
+
+`socat TCP4-LISTEN:1234,fork TCP4:127.0.0.1:5678`
