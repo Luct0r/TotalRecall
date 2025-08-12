@@ -3,6 +3,10 @@
 w
 who
 ```
+**Don't Record Bash History in Current Shell**
+```
+shopt -u -o history
+```
 **Firewall Block ICMP**
 ```
 iptables -A INPUT -p icmp --icmp-type echo-request -j REJECT
