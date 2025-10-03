@@ -21,3 +21,12 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 iptables -A INPUT -p tcp -j DROP
 ```
+**Search XLSX**
+```
+virtualenv venv
+source venv/bin/activate
+pip3 install xlsxgrep
+
+user="email@domain.com"
+xlsxgrep "$user" -H -N --sep=";" -r .
+```
