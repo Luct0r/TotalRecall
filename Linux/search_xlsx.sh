@@ -4,12 +4,11 @@
 ##
 ### Requires:
 # pip3 install xlsxgrep
-#
+##
 ### Essentially automates the following:
 ##
 # user="email@domain.com"
 # xlsxgrep "$user" -H -N --sep=";" -r .
-#
 
 # Check if file is provided
 if [ $# -eq 0 ]; then
@@ -29,5 +28,6 @@ while IFS= read -r user; do
     if [ -n "$user" ]; then
         echo "Searching for: $user"
         xlsxgrep "$user" -H -N --sep=";" -r .
+        echo ""
     fi
 done < "$1"
